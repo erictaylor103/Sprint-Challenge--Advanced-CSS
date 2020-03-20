@@ -1,1 +1,46 @@
 // Navigation code here
+
+.navigation{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  background-color: @wild-sand;
+  animation-name: animated;
+  animation-duration: 4s;
+
+
+  @media @mobile{
+    flex-direction: column;
+  }
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  width: 67%;
+  margin-top: 20px;
+
+  @media @mobile{
+    width: 80%;
+  }
+
+}
+
+a{
+  &:hover{
+    color: @navigation-links-hover-color;
+  }
+}
+
+}//navigation
+
+
+//animation transition colors
+@keyframes animated {
+  0%   {background-color: darkcyan;}
+  25%  {background-color: yellow;}
+  50%  {background-color: lightblue;}
+  100% {background-color: @wild-sand;}
+}
